@@ -1,24 +1,66 @@
 {
-  "name": "qirvo-packages",
+  "name": "@qirvo/packages",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./lib": {
+      "import": "./dist/lib/index.js",
+      "require": "./dist/lib/index.js",
+      "types": "./dist/lib/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    }
+  },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist",
+    "dev": "tsc --watch",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.3"
+    "@google/generative-ai": "^0.24.1",
+    "@octokit/rest": "^22.0.0",
+    "axios": "^1.12.0",
+    "bcryptjs": "^3.0.2",
+    "firebase": "^12.2.1",
+    "firebase-admin": "^13.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "jszip": "^3.10.1",
+    "mongodb": "^6.19.0",
+    "next": "^15.5.3",
+    "openai": "^5.20.1",
+    "stripe": "^18.5.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@biomejs/biome": "2.2.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@biomejs/biome": "2.2.0"
+    "@types/react": "^19.1.13",
+    "rimraf": "^6.0.1",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   }
 }
