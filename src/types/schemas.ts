@@ -1,6 +1,4 @@
-import { CANONICAL_PERMISSIONS } from '@/constants/coninical-permissions';
-import { handler, pages } from 'next/dist/build/templates/app-page';
-import { config, permission } from 'process';
+import { CANONICAL_PERMISSIONS } from '@/constants/canonical-permissions';
 import { z } from 'zod';
 
 // Base schemas

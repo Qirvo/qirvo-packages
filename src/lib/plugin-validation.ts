@@ -1,4 +1,4 @@
-import { CANONICAL_PERMISSIONS } from '@/constants/coninical-permissions';
+import { CANONICAL_PERMISSIONS } from '@/constants/canonical-permissions';
 import { CanonicalPluginManifest, CanonicalPluginManifestSchema, adaptToCanonicalManifest, normalizePermissionObjects, normalizePermissionStrings } from './manifest-canonical';
 
 export interface ValidationResult<T> {

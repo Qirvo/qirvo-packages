@@ -1,4 +1,4 @@
-import { CANONICAL_PERMISSIONS } from '@/constants/coninical-permissions';
+import { CANONICAL_PERMISSIONS } from '@/constants/canonical-permissions';
 import { z } from 'zod';
 
 export type CanonicalPermission = typeof CANONICAL_PERMISSIONS[number];
