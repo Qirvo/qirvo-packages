@@ -4,12 +4,18 @@ export type * from './types';
 
 // Re-export commonly used items to avoid conflicts
 export * from './lib/manifest-canonical';
+
+// Export runtime schemas (not type-only)
+export {
+    GoalSchema,
+    TaskSchema,
+    UserSchema
+} from './types/schemas';
+
+// Export types
 export type {
     Goal,
-    GoalSchema,
     Task,
-    TaskSchema,
-    User,
-    UserSchema
+    User
 } from './types/schemas';
 
