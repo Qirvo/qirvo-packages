@@ -1,4 +1,4 @@
-import { CANONICAL_PERMISSIONS } from '@/constants/canonical-permissions';
+import { CANONICAL_PERMISSIONS } from '../constants/canonical-permissions';
 import { z } from 'zod';
 
 // Base schemas
