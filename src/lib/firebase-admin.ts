@@ -1,7 +1,7 @@
-import { getApps, initializeApp, cert, App } from 'firebase-admin/app';
-import { getAuth, Auth } from 'firebase-admin/auth';
+import { cert, getApps, initializeApp, type App } from 'firebase-admin/app';
+import { getAuth, type Auth } from 'firebase-admin/auth';
+import { Firestore, getFirestore } from 'firebase-admin/firestore';
 import { getStorage, Storage } from 'firebase-admin/storage';
-import { getFirestore, Firestore } from 'firebase-admin/firestore';
 
 let adminApp: App;
 let adminAuth: Auth;
@@ -59,4 +59,5 @@ if (!getApps().length) {
     adminFirestore = getFirestore(adminApp);
 }
 
-export { adminApp, adminAuth, adminStorage, adminFirestore };
+export { adminApp, adminAuth, adminFirestore, adminStorage };
+

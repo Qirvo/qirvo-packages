@@ -1,4 +1,4 @@
-import { PluginConfigField, PluginManifest } from "./schemas";
+import type { PluginConfigField, PluginManifest } from "./schemas";
 
 export interface PluginRuntime {
   id: string;
