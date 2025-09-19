@@ -9,13 +9,16 @@ export * from './lib/manifest-canonical';
 export {
     GoalSchema,
     TaskSchema,
-    UserSchema
+    UserSchema,
+    DailyPlanSchema,
+    RegistrationSchema
 } from './types/schemas';
 
 // Export types
 export type {
     Goal,
     Task,
-    User
+    User,
+    DailyPlan
 } from './types/schemas';
 

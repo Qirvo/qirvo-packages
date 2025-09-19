@@ -1,5 +1,5 @@
-import { CANONICAL_PERMISSIONS } from '../constants/canonical-permissions';
 import { z } from 'zod';
+import { CANONICAL_PERMISSIONS } from '../constants/canonical-permissions';
 
 // Base schemas
 export const UserSchema = z.object({
